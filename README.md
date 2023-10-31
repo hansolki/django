@@ -48,7 +48,7 @@ urlpatterns = [
 ```
 
 9. views.py
-```
+```python
 def index(request):
     return render(reqeust, 'index.html')
 ```
