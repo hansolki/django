@@ -2,7 +2,7 @@
 
 1. 프로젝트 생성
 ```python
-
+django-admin startproject <pjname> .
 ```
 2. 가상환경 설정
 ```
@@ -19,7 +19,9 @@ deactivate
 ```
 
 4. 가상환경 내부에 django 설치
-
+```
+pip install django
+```
 5. 서버 실행 확인(종료는 `ctrl + c`)
 ```
 python manage.py runserver
@@ -36,11 +38,23 @@ django-admin startapp <appname>
 
 8. `urls.py`에 등록
 ```python
+from django.urls import path
+from app_intro import views
 
+urlpatterns = [
+    ...
+    path('index/', views.index),
+]
 ```
 
-9.
+9. views.py
+```
+def index(request):
+    return render(reqeust, 'index.html')
+```
 
 10. templates 폴더 생성 => index.html 생성
 
+
+![mtv](./assets/mtv.jpeg)
 
